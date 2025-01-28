@@ -33,3 +33,11 @@ Indicar que por ejemplo Google, limita las solicitudes que se realizan, para que
 ```shell
 sublist3r -d hackersploit.org -e google,yahoo
 ```
+
+[Email Harvesting](https://es.wikipedia.org/wiki/Recopilaci%C3%B3n_de_direcciones_de_correo_electr%C3%B3nico#:~:text=La%20recolecci%C3%B3n%20o%20raspado%20de,correo%20electr%C3%B3nico%20masivo%20o%20spam.): Consiste en obtener la mayor cantidad de correos electrónicos para usarlos en una futura de prueba de pen testing.
+Podemos usar herramientas como: [theHarvester](https://github.com/laramies/theHarvester), esta herramienta usa información de fuentes públicas igual que sublist3r.
+
+```shell
+theHarvester -d hackersploit.org -b google;linkedin
+theHarvester -d HackerSploit -b google;linkedin
+```
