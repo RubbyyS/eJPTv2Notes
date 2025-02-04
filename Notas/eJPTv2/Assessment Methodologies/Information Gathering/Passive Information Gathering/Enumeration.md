@@ -41,3 +41,6 @@ Podemos usar herramientas como: [theHarvester](https://github.com/laramies/theHa
 theHarvester -d hackersploit.org -b google;linkedin
 theHarvester -d HackerSploit -b google;linkedin
 ```
+
+Leaked Password Databases: Podemos usar bases de datos de contraseñas filtradas, o sabes si tenemos algun correo del objetivo que estamos atacando, podemos usar, por ejemplo: [haveibeenpwned](https://haveibeenpwned.com/), para saber si dicha cuenta de correo cuenta con alguna filtración.
+Esto nos sirve para ver si esa contraseña filtrada está siendo reutilizada por el usuario en algún otro sitio.
