@@ -23,5 +23,7 @@ Podemos usar NMAP, intentar descubrir que puertos tiene abierto los hosts de una
 - **nmap -Pn -sU  127.0.0.1** - Escanea puertos UDP.
 - **nmap -Pn -F  127.0.0.1 -v** - Verbose, muestra las acciones que va realizando.
 - **nmap -Pn -F -sV  127.0.0.1** - -sV nos muestra la versión de servicios detectados.
-- map -Pn -F -sV -O  127.0.0.1** - -O nos muestra la versión del sistema operativo.
--  map -Pn -F -sV -O -sC 127.0.0.1** - -sC ejecuta una lista de scripts de nmap, para obtener más información acerca de los puertos.
+- **map -Pn -F -sV -O  127.0.0.1** - -O nos muestra la versión del sistema operativo.
+-  **map -Pn -F -sV -O -sC 127.0.0.1*** - -sC ejecuta una lista de scripts de nmap, para obtener más información acerca de los puertos.
+- **map -Pn -F -A 127.0.0.1*** - Escaneo agresivo la opción -A lleva implicita las opciones: -sV -O -sC
+- **map -Pn -F -T4 -sV -O -sC 127.0.0.1*** - con -T desde -T1 hasta -T5 podemos indicar la rapidez, cuanto más alto rápido pero mas agresivo.
