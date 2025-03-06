@@ -15,3 +15,8 @@ Cada paquete en cada protocolo tiene la siguiente estructura:
 - Cabecera: La cabecera tiene una estructura especifica del protocolo: esto asegura que el host que lo recibe puede interpretar el payload.
 - Payload: Es la información actual que esta siendo enviada. Puede ser algo como por ejemplo una parte de un email o el contenido de un archivo mientras se esta descargando.
 
+## OSI MODEL
+
+- El modelo OSI (Open System Interconnection), es un marco conceptual que estandariza las funciones de una telecomunicación o un sistema informático compuesto por 7 capas.
+- Este fue desarrollado por la Organización Internacional de Normalización (ISO), para facilitar la comunicación entre los diferentes sistemas y dispositivos, asegurando la operabilidad y comprensión en una amplia gama de tecnologías de red.
+- El modelo OSI esta dividido en 7 capas, cada una representa una funcionalidad especifica en el proceso de la comunicación de red.
