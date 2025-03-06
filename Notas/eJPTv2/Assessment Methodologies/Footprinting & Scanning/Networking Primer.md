@@ -20,3 +20,13 @@ Cada paquete en cada protocolo tiene la siguiente estructura:
 - El modelo OSI (Open System Interconnection), es un marco conceptual que estandariza las funciones de una telecomunicación o un sistema informático compuesto por 7 capas.
 - Este fue desarrollado por la Organización Internacional de Normalización (ISO), para facilitar la comunicación entre los diferentes sistemas y dispositivos, asegurando la operabilidad y comprensión en una amplia gama de tecnologías de red.
 - El modelo OSI esta dividido en 7 capas, cada una representa una funcionalidad especifica en el proceso de la comunicación de red.
+
+|**Capa**|**Descripción**|**Ejemplo**|
+|---|---|---|
+|**Capa 7: Aplicación**|Proporciona servicios de red a las aplicaciones del usuario (por ejemplo, navegadores web).|HTTP (navegar por la web), FTP (transferencia de archivos)|
+|**Capa 6: Presentación**|Se encarga de la representación de datos (formato, cifrado, compresión).|Cifrado SSL/TLS, formato JPEG, compresión ZIP|
+|**Capa 5: Sesión**|Establece, mantiene y finaliza las sesiones de comunicación entre aplicaciones.|Protocolo SMB (para compartir archivos), RPC (llamadas a procedimientos remotos)|
+|**Capa 4: Transporte**|Asegura la transferencia fiable de datos entre sistemas, controlando el flujo y la corrección de errores.|TCP (transporte fiable de datos), UDP (transporte sin conexión)|
+|**Capa 3: Red**|Se encarga del enrutamiento y direccionamiento de datos a través de diferentes redes.|Protocolo IP, Routers|
+|**Capa 2: Enlace de Datos**|Proporciona la comunicación de datos entre dispositivos en la misma red, y controla los errores de transmisión.|Ethernet, Wi-Fi, MAC (dirección de hardware)|
+|**Capa 1: Física**|Transmite los bits a través del medio físico de transmisión (cables, ondas, etc.).|Cable de red (Ethernet), ondas de radio (Wi-Fi), fibra óptica
