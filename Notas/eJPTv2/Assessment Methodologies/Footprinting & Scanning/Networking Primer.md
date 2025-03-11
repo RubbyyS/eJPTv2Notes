@@ -38,9 +38,10 @@ Cada paquete en cada protocolo tiene la siguiente estructura:
 
 ##### **Protocolos de la capa de red:**
 
-- Protocolo de internet (IP):La IP es el protocolo principal en la capa de red, responsable del direccionamiento lógico y el enrutamiento. Define la estructura de las direcciones IP y cómo se asignan a los dispositivos. La IP también especifica el formato de los paquetes de datos, incluyendo los campos de encabezado que contienen información como las direcciones de origen y destino, la longitud del paquete y las banderas de fragmentación.
+- [Protocolo de internet](https://es.wikipedia.org/wiki/Protocolo_de_internet#:~:text=El%20protocolo%20de%20internet%20(en,seg%C3%BAn%20el%20modelo%20internacional%20OSI.&text=env%C3%ADo%20de%20paquetes%20de%20datos,como%20a%20trav%C3%A9s%20de%20redes.) (IP):La IP es el protocolo principal en la capa de red, responsable del direccionamiento lógico y el enrutamiento. Define la estructura de las direcciones IP y cómo se asignan a los dispositivos. La IP también especifica el formato de los paquetes de datos, incluyendo los campos de encabezado que contienen información como las direcciones de origen y destino, la longitud del paquete y las banderas de fragmentación.
 - 
 	- IPv4: Usa 32 bits
 	- IPv6: Creado para las limitaciones del ipv4 usa 128
 	
-- Internet Control Message Protocol (ICMP): El ICMP (Internet Control Message Protocol) es un protocolo de apoyo utilizado para reportar errores y propósitos de diagnóstico. Define varios tipos de mensajes, como solicitud/respuesta de eco (utilizado por ping), destino inalcanzable, tiempo excedido y mensajes de redirección. El ICMP ayuda a los administradores de red a solucionar problemas de conectividad e identificar problemas de red.
+- [Internet Control Message Protocol](https://es.wikipedia.org/wiki/Protocolo_de_control_de_mensajes_de_Internet) (ICMP): El ICMP (Internet Control Message Protocol) es un protocolo de apoyo utilizado para reportar errores y propósitos de diagnóstico. Define varios tipos de mensajes, como solicitud/respuesta de eco (utilizado por ping), destino inalcanzable, tiempo excedido y mensajes de redirección. El ICMP ayuda a los administradores de red a solucionar problemas de conectividad e identificar problemas de red.
+- [Cabecera IP:](https://es.wikipedia.org/wiki/Cabecera_IP)
