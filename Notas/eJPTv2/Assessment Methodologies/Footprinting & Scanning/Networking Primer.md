@@ -21,12 +21,26 @@ Cada paquete en cada protocolo tiene la siguiente estructura:
 - Este fue desarrollado por la Organización Internacional de Normalización (ISO), para facilitar la comunicación entre los diferentes sistemas y dispositivos, asegurando la operabilidad y comprensión en una amplia gama de tecnologías de red.
 - El modelo OSI esta dividido en 7 capas, cada una representa una funcionalidad especifica en el proceso de la comunicación de red.
 
-|**Capa**|**Descripción**|**Ejemplo**|
-|---|---|---|
-|**Capa 7: Aplicación**|Proporciona servicios de red a las aplicaciones del usuario (por ejemplo, navegadores web).|HTTP (navegar por la web), FTP (transferencia de archivos)|
-|**Capa 6: Presentación**|Se encarga de la representación de datos (formato, cifrado, compresión).|Cifrado SSL/TLS, formato JPEG, compresión ZIP|
-|**Capa 5: Sesión**|Establece, mantiene y finaliza las sesiones de comunicación entre aplicaciones.|Protocolo SMB (para compartir archivos), RPC (llamadas a procedimientos remotos)|
-|**Capa 4: Transporte**|Asegura la transferencia fiable de datos entre sistemas, controlando el flujo y la corrección de errores.|TCP (transporte fiable de datos), UDP (transporte sin conexión)|
-|**Capa 3: Red**|Se encarga del enrutamiento y direccionamiento de datos a través de diferentes redes.|Protocolo IP, Routers|
-|**Capa 2: Enlace de Datos**|Proporciona la comunicación de datos entre dispositivos en la misma red, y controla los errores de transmisión.|Ethernet, Wi-Fi, MAC (dirección de hardware)|
-|**Capa 1: Física**|Transmite los bits a través del medio físico de transmisión (cables, ondas, etc.).|Cable de red (Ethernet), ondas de radio (Wi-Fi), fibra óptica
+| **Capa**                    | **Descripción**                                                                                                 | **Ejemplo**                                                                      |
+| --------------------------- | --------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------- |
+| **Capa 7: Aplicación**      | Proporciona servicios de red a las aplicaciones del usuario (por ejemplo, navegadores web).                     | HTTP (navegar por la web), FTP (transferencia de archivos)                       |
+| **Capa 6: Presentación**    | Se encarga de la representación de datos (formato, cifrado, compresión).                                        | Cifrado SSL/TLS, formato JPEG, compresión ZIP                                    |
+| **Capa 5: Sesión**          | Establece, mantiene y finaliza las sesiones de comunicación entre aplicaciones.                                 | Protocolo SMB (para compartir archivos), RPC (llamadas a procedimientos remotos) |
+| **Capa 4: Transporte**      | Asegura la transferencia fiable de datos entre sistemas, controlando el flujo y la corrección de errores.       | TCP (transporte fiable de datos), UDP (transporte sin conexión)                  |
+| **Capa 3: Red**             | Se encarga del enrutamiento y direccionamiento de datos a través de diferentes redes.                           | Protocolo IP, Routers                                                            |
+| **Capa 2: Enlace de Datos** | Proporciona la comunicación de datos entre dispositivos en la misma red, y controla los errores de transmisión. | Ethernet, Wi-Fi, MAC (dirección de hardware)                                     |
+| **Capa 1: Física**          | Transmite los bits a través del medio físico de transmisión (cables, ondas, etc.).                              | Cable de red (Ethernet), ondas de radio (Wi-Fi), fibra óptica                    |
+## NETWORK LAYER
+
+- La [capa de red](https://www.azion.com/es/learning/network-layer/que-es-la-capa-de-red/#:~:text=La%20capa%20de%20red%2C%20tambi%C3%A9n,y%20el%20reenv%C3%ADo%20de%20paquetes.) (capa 3): se encarga de permitir la conexión entre dispositivos que están ubicados en redes diferentes.
+- Su principal función es determinar el camino más optimo de los datos desde donde se envían hasta el receptor, incluso si los dispositivos se encuentran en diferentes redes.
+- La capa de red abstrae la red física subyacente, lo que permite la creación de una interconexión de redes cohesiva.
+
+##### **Protocolos de la capa de red:**
+
+- Protocolo de internet (IP):La IP es el protocolo principal en la capa de red, responsable del direccionamiento lógico y el enrutamiento. Define la estructura de las direcciones IP y cómo se asignan a los dispositivos. La IP también especifica el formato de los paquetes de datos, incluyendo los campos de encabezado que contienen información como las direcciones de origen y destino, la longitud del paquete y las banderas de fragmentación.
+- 
+	- IPv4: Usa 32 bits
+	- IPv6: Creado para las limitaciones del ipv4 usa 128
+	
+- Internet Control Message Protocol (ICMP): El ICMP (Internet Control Message Protocol) es un protocolo de apoyo utilizado para reportar errores y propósitos de diagnóstico. Define varios tipos de mensajes, como solicitud/respuesta de eco (utilizado por ping), destino inalcanzable, tiempo excedido y mensajes de redirección. El ICMP ayuda a los administradores de red a solucionar problemas de conectividad e identificar problemas de red.
