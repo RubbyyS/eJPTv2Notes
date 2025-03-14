@@ -45,3 +45,26 @@ Cada paquete en cada protocolo tiene la siguiente estructura:
 	
 - [Internet Control Message Protocol](https://es.wikipedia.org/wiki/Protocolo_de_control_de_mensajes_de_Internet) (ICMP): El ICMP (Internet Control Message Protocol) es un protocolo de apoyo utilizado para reportar errores y propósitos de diagnóstico. Define varios tipos de mensajes, como solicitud/respuesta de eco (utilizado por ping), destino inalcanzable, tiempo excedido y mensajes de redirección. El ICMP ayuda a los administradores de red a solucionar problemas de conectividad e identificar problemas de red.
 - [Cabecera IP:](https://es.wikipedia.org/wiki/Cabecera_IP)
+
+## TRANSPORT LAYER
+
+La [capa de transporte](https://es.wikipedia.org/wiki/Capa_de_red) en el modelo OSI (Open Systems Interconnection) es la cuarta capa y su principal función es proporcionar la comunicación de datos de extremo a extremo entre sistemas o dispositivos. Se encarga de asegurar que los datos enviados desde la capa de aplicación lleguen correctamente a la aplicación de destino.
+
+### Funciones clave de la capa de transporte:
+
+1. **Segmentación y Reensamblaje**: La capa de transporte divide los datos en segmentos más pequeños para enviarlos a través de la red, y luego reensambla esos segmentos en el destino.
+
+2. **Control de flujo**: Regula la cantidad de datos que se pueden enviar para evitar la saturación del receptor.
+
+3. **Control de errores**: Proporciona mecanismos para detectar y corregir errores en la transmisión, asegurando que los datos lleguen correctamente al destino.
+
+4. **Establecimiento, mantenimiento y terminación de la conexión**: Establece una comunicación confiable, gestionando el inicio y la finalización de las conexiones entre los dispositivos.
+
+5. **Multiplexación**: Permite que múltiples aplicaciones o procesos se comuniquen de forma simultánea utilizando la misma conexión de red, identificando cada flujo de datos mediante puertos.
+
+### Protocolos comunes:
+
+- **TCP (Transmission Control Protocol)**: Ofrece una comunicación confiable, controlando la entrega de los datos de manera ordenada y asegurando que no se pierdan ni lleguen duplicados.
+- **UDP (User Datagram Protocol)**: Un protocolo sin conexión y sin garantía de entrega, pero más rápido que TCP, adecuado para aplicaciones que no requieren fiabilidad como transmisión de video o voz.
+
+En resumen, la capa de transporte es crucial para asegurar una comunicación efectiva y confiable entre aplicaciones de sistemas diferentes, gestionando la fiabilidad y el control de los datos.
