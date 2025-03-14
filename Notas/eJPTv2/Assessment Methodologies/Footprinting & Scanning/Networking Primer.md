@@ -65,6 +65,40 @@ La [capa de transporte](https://es.wikipedia.org/wiki/Capa_de_red) en el modelo 
 ### Protocolos comunes:
 
 - **TCP (Transmission Control Protocol)**: Ofrece una comunicación confiable, controlando la entrega de los datos de manera ordenada y asegurando que no se pierdan ni lleguen duplicados.
+
+	1. **Orientado a la conexión**: TCP establece una conexión antes de la transferencia de datos (handshake). Esto asegura que ambos extremos de la comunicación estén listos antes de que los datos se envíen.
+
+	2. **Confiabilidad**: Garantiza que los datos lleguen correctamente, realizando la verificación de errores, retransmisión de paquetes perdidos y asegurando el orden correcto de los paquetes.
+
+	3. **Control de flujo**: Regula la cantidad de datos que se pueden enviar para evitar que el receptor se sobrecargue.
+
+	4. **Control de congestión**: Ajusta la velocidad de transmisión para evitar la sobrecarga de la red.
+
+	5. **Retransmisión en caso de pérdida de datos**: Si un paquete se pierde durante la transmisión, TCP lo detecta y lo vuelve a enviar.
+
+	6. **Orientado a la fiabilidad**: Es ideal para aplicaciones donde la pérdida de datos no es aceptable, como la navegación web (HTTP/HTTPS), correo electrónico (SMTP), transferencia de archivos (FTP), etc.
+
 - **UDP (User Datagram Protocol)**: Un protocolo sin conexión y sin garantía de entrega, pero más rápido que TCP, adecuado para aplicaciones que no requieren fiabilidad como transmisión de video o voz.
+
+	1. **Sin conexión**: UDP no establece una conexión antes de enviar datos, lo que lo hace más rápido pero menos confiable.
+
+	2. **Sin garantía de entrega**: No asegura que los datos lleguen al destino, ni garantiza el orden o la integridad de los paquetes.
+
+	3. **Sin control de flujo ni control de congestión**: No hay mecanismos para regular la velocidad de envío ni evitar la sobrecarga de la red.
+
+	4. **Más rápido y eficiente**: Al no requerir la configuración de conexión y no realizar comprobaciones adicionales de errores o control de flujo, UDP es más rápido y tiene menos sobrecarga que TCP.
+
+	5. **Adecuado para aplicaciones en tiempo real**: Ideal para aplicaciones donde la velocidad es crucial y se puede tolerar cierta pérdida de datos, como en transmisión de video, voz sobre IP (VoIP), juegos en línea y servicios de transmisión en vivo.
+
+
+| Característica            | **TCP**                                                       | **UDP**                                      |
+| ------------------------- | ------------------------------------------------------------- | -------------------------------------------- |
+| **Conexión**              | Orientado a la conexión                                       | Sin conexión                                 |
+| **Fiabilidad**            | Alta, con verificación y retransmisión                        | Baja, sin garantía de entrega                |
+| **Orden de los paquetes** | Asegurado                                                     | No asegurado                                 |
+| **Control de flujo**      | Sí                                                            | No                                           |
+| **Control de congestión** | Sí                                                            | No                                           |
+| **Velocidad**             | Más lento debido a la verificación                            | Más rápido debido a la falta de verificación |
+| **Usos comunes**          | Navegación web, correo electrónico, transferencia de archivos | Streaming, VoIP, juegos en línea             |
 
 En resumen, la capa de transporte es crucial para asegurar una comunicación efectiva y confiable entre aplicaciones de sistemas diferentes, gestionando la fiabilidad y el control de los datos.
