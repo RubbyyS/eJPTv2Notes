@@ -71,12 +71,40 @@ La [capa de transporte](https://es.wikipedia.org/wiki/Capa_de_red) en el modelo 
 	2. **Confiabilidad**: Garantiza que los datos lleguen correctamente, realizando la verificación de errores, retransmisión de paquetes perdidos y asegurando el orden correcto de los paquetes.
 
 	3. **Control de flujo**: Regula la cantidad de datos que se pueden enviar para evitar que el receptor se sobrecargue.
-
+ 
 	4. **Control de congestión**: Ajusta la velocidad de transmisión para evitar la sobrecarga de la red.
 
 	5. **Retransmisión en caso de pérdida de datos**: Si un paquete se pierde durante la transmisión, TCP lo detecta y lo vuelve a enviar.
 
 	6. **Orientado a la fiabilidad**: Es ideal para aplicaciones donde la pérdida de datos no es aceptable, como la navegación web (HTTP/HTTPS), correo electrónico (SMTP), transferencia de archivos (FTP), etc.
+
+El **TCP 3-way handshake** (o **apretón de manos de 3 vías** en español) es el proceso utilizado por el protocolo TCP (Transmission Control Protocol) para establecer una conexión confiable entre dos dispositivos antes de que se transmita cualquier dato. Este proceso garantiza que ambas partes estén listas para la comunicación y establece los parámetros de la conexión.
+
+El 3-way handshake se compone de tres pasos:
+
+1. SYN (Synchronize):
+
+- El dispositivo que inicia la conexión (cliente) envía un segmento TCP con el **SYN flag** activado a la máquina destino (servidor). Este segmento indica que el cliente desea establecer una conexión.
+- Este paso también incluye un número de secuencia inicial que se usará en la transmisión de datos.
+
+2. SYN-ACK (Synchronize-Acknowledge):
+
+- El servidor recibe el segmento SYN del cliente y responde con un segmento que tiene activados los flags **SYN** y **ACK** (Acknowledgment).
+- El **SYN** indica que el servidor está dispuesto a establecer una conexión, y el **ACK** es una confirmación de que ha recibido el SYN del cliente.
+- El servidor también envía su propio número de secuencia inicial para la conexión.
+
+3. ACK (Acknowledge):
+
+- Finalmente, el cliente responde con un segmento **ACK** (Acknowledgment) al servidor, confirmando que ha recibido el SYN-ACK del servidor. Este mensaje no lleva el flag SYN, solo el flag ACK.
+- Después de este paso, la conexión se establece y ambos dispositivos pueden comenzar a intercambiar datos de forma confiable.
+
+Resumen del proceso:
+
+1. **Cliente → Servidor**: Envia un **SYN** (solicitud de conexión).
+2. **Servidor → Cliente**: Responde con **SYN-ACK** (confirmación de conexión).
+3. **Cliente → Servidor**: Responde con un **ACK** (confirmación final de conexión).
+
+Este proceso garantiza que ambos dispositivos estén listos para la comunicación antes de que se envíen los datos, lo que permite que se maneje correctamente cualquier error de conexión o pérdida de paquetes.
 
 - **UDP (User Datagram Protocol)**: Un protocolo sin conexión y sin garantía de entrega, pero más rápido que TCP, adecuado para aplicaciones que no requieren fiabilidad como transmisión de video o voz.
 
