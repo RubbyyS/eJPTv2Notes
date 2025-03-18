@@ -104,7 +104,7 @@ Resumen del proceso:
 2. **Servidor → Cliente**: Responde con **SYN-ACK** (confirmación de conexión).
 3. **Cliente → Servidor**: Responde con un **ACK** (confirmación final de conexión).
 
-Este proceso garantiza que ambos dispositivos estén listos para la comunicación antes de que se envíen los datos, lo que permite que se maneje correctamente cualquier error de conexión o pérdida de paquetes.
+Este proceso garantiza que ambos dispositivos estén listos para la comunicación antes de que e envíen los datos, lo que permite que se maneje correctamente cualquier error de conexión o pérdida de paquetes.
 
 - **UDP (User Datagram Protocol)**: Un protocolo sin conexión y sin garantía de entrega, pero más rápido que TCP, adecuado para aplicaciones que no requieren fiabilidad como transmisión de video o voz.
 
@@ -129,4 +129,4 @@ Este proceso garantiza que ambos dispositivos estén listos para la comunicació
 | **Velocidad**             | Más lento debido a la verificación                            | Más rápido debido a la falta de verificación |
 | **Usos comunes**          | Navegación web, correo electrónico, transferencia de archivos | Streaming, VoIP, juegos en línea             |
 
-En resumen, la capa de transporte es crucial para asegurar una comunicación efectiva y confiable entre aplicaciones de sistemas diferentes, gestionando la fiabilidad y el control de los datos.
+En resumen, la capa de transporte es crucial para asegurar una comunicación efectiva y confiable entre aplicaciones de sistemas diferentes, gestionando la fiabilidad y el control de los datos. 
