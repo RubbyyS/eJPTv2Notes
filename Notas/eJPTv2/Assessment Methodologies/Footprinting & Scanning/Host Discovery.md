@@ -1,6 +1,6 @@
 ### **Network Mapping:**
 
-### ¿### ¿Qué es?
+### ¿Qué es?
 
 - **Network mapping** en pentesting es el proceso de identificar y mapear dispositivos, servicios y configuraciones de una red con el fin de encontrar vulnerabilidades que puedan ser explotadas durante una prueba de penetración.
 
@@ -88,3 +88,35 @@
     - Nmap tiene un **motor de scripts** (NSE) que permite automatizar pruebas de seguridad, como la detección de vulnerabilidades o la explotación de configuraciones incorrectas en los servicios.
 
 Estas funcionalidades hacen de Nmap una herramienta versátil y poderosa para auditorías de seguridad y pruebas de penetración.
+
+
+##### **HOST DISCOVERY:**
+
+**Host Discovery** es el proceso de identificar qué dispositivos (hosts) están activos en una red, es decir, determinar qué sistemas están encendidos y respondiendo a las solicitudes de red. Este proceso es crucial en tareas de **reconocimiento** y **auditoría de redes**, ya que permite mapear los dispositivos de la infraestructura antes de realizar pruebas de penetración o análisis de seguridad.
+
+### Técnicas de Host Discovery:
+
+1. **Ping (ICMP Echo Request)**:
+    
+    - Enviar paquetes **ICMP Echo Request** (comúnmente conocido como "ping") a un rango de direcciones IP. Si el dispositivo está activo, responderá con un **ICMP Echo Reply**.
+2. **Escaneo ARP (Address Resolution Protocol)**:
+    
+    - Utiliza **ARP** para descubrir dispositivos en redes locales. ARP solicita la dirección MAC de un dispositivo a partir de su dirección IP, lo que permite identificar hosts activos incluso si el ping está bloqueado.
+3. **Escaneo TCP Connect**:
+    
+    - Intenta realizar una conexión TCP completa con los puertos más comunes (como el puerto 80, 443, etc.). Si el puerto responde, el host está activo.
+4. **Escaneo de Puertos (SYN Scan)**:
+    
+    - En lugar de enviar un simple ping, se envía un paquete SYN (inicio de conexión) a los puertos y espera una respuesta de **SYN-ACK** si el puerto está abierto, indicando que el dispositivo está activo.
+5. **Escaneo de ICMP Timestamp**:
+    
+    - Envía una solicitud de **ICMP Timestamp** para verificar si el dispositivo responde. Algunos dispositivos responden a estos paquetes con la fecha y hora del sistema, indicando que están activos.
+6. **Escaneo de DNS**:
+    
+    - Realiza consultas **DNS** a un servidor para determinar si ciertos nombres de host están activos y si hay respuestas del servidor DNS, lo que sugiere que los dispositivos asociados están activos.
+7. **Escaneo UDP**:
+    
+    - Envía paquetes **UDP** a puertos específicos y observa si hay respuestas, ya que algunos servicios UDP responden incluso si no se ha establecido una conexión completa.
+8. **Escaneo de SMNP (Simple Network Management Protocol)**:
+    
+    - Utiliza **SNMP** para consultar información de red, como la lista de dispositivos activos, lo que puede ayudar a descubrir hosts.
