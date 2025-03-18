@@ -104,7 +104,7 @@ Resumen del proceso:
 2. **Servidor → Cliente**: Responde con **SYN-ACK** (confirmación de conexión).
 3. **Cliente → Servidor**: Responde con un **ACK** (confirmación final de conexión).
 
-Este proceso garantiza que ambos dispositivos estén listos para la comunicación antes de que e envíen los datos, lo que permite que se maneje correctamente cualquier error de conexión o pérdida de paquetes.
+Este proceso garantiza que ambos dispositivos estén listos para la comunicación antes de que se envíen los datos, lo que permite que se maneje correctamente cualquier error de conexión o pérdida de paquetes.
 
 - **UDP (User Datagram Protocol)**: Un protocolo sin conexión y sin garantía de entrega, pero más rápido que TCP, adecuado para aplicaciones que no requieren fiabilidad como transmisión de video o voz.
 
