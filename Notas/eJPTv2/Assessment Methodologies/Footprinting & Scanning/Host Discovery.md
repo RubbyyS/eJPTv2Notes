@@ -120,3 +120,31 @@ Estas funcionalidades hacen de Nmap una herramienta versátil y poderosa para au
 8. **Escaneo de SMNP (Simple Network Management Protocol)**:
     
     - Utiliza **SNMP** para consultar información de red, como la lista de dispositivos activos, lo que puede ayudar a descubrir hosts.
+
+
+### Ping Sweeps:
+
+**Ping Sweep** (también conocido como **Ping Sweep Scan**) es una técnica utilizada en el descubrimiento de hosts en una red. Consiste en enviar paquetes **ICMP Echo Request** (pings) a un rango de direcciones IP para determinar cuáles están activas, es decir, qué dispositivos están respondiendo a los pings.
+### ¿Cómo funciona el Ping Sweep?
+
+1. Se envía un **ping** a varias direcciones IP dentro de un rango específico.
+2. Si un dispositivo está activo y configurado para responder, enviará un **ICMP Echo Reply**.
+3. Si no hay respuesta, el dispositivo puede estar apagado o estar bloqueando las respuestas ICMP (por ejemplo, debido a un firewall).
+
+### Usos comunes del Ping Sweep:
+
+- **Reconocimiento en Pentesting**: Se usa para identificar qué dispositivos están activos en una red antes de realizar otras pruebas de penetración.
+- **Administración de redes**: Los administradores de redes utilizan esta técnica para verificar qué dispositivos están conectados y funcionando correctamente en su red.
+
+### Limitaciones:
+
+- Algunos dispositivos y redes bloquean o filtran paquetes ICMP para evitar que se detecten, lo que puede hacer que el Ping Sweep no sea 100% efectivo.
+
+**Comando en Nmap para Ping Sweep**:
+
+```bash
+nmap -sn <rango de IP>
+```
+
+Este comando realizará un **ping sweep** a un rango de direcciones IP, sin realizar un escaneo de puertos, y solo indicará qué dispositivos están activos en la red.
+
