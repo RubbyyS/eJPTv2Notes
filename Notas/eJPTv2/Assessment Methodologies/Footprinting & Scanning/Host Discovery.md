@@ -148,3 +148,38 @@ nmap -sn <rango de IP>
 
 Este comando realizará un **ping sweep** a un rango de direcciones IP, sin realizar un escaneo de puertos, y solo indicará qué dispositivos están activos en la red.
 
+### FPING
+
+`fping` es una herramienta de red que permite hacer ping a múltiples direcciones IP de manera simultánea y más eficiente que el comando `ping`.
+
+**Comando de ejemplo**:
+
+Para hacer ping a varias direcciones IP:
+
+```bash
+fping 192.168.1.1 192.168.1.2 192.168.1.3
+```
+
+Esto enviará paquetes ICMP a las tres direcciones al mismo tiempo y mostrará los resultados.
+
+Para hacer un "ping" a todos los equipos de una red usando `fping`, puedes usar una dirección de red con un rango de direcciones IP. Por ejemplo, si tu red es `192.168.1.0/24`, puedes hacer ping a todas las direcciones IP de esa red con el siguiente comando:
+
+```bash
+fping -g 192.168.1.0/24
+```
+
+- `-g`: Indica a `fping` que haga un "ping" a todas las direcciones IP en el rango especificado.
+
+Este comando enviará paquetes ICMP a todas las direcciones IP en el rango `192.168.1.0` a `192.168.1.255` y te mostrará cuáles están activas.
+
+Para hacer que `fping` indique únicamente los sistemas activos, puedes usar la opción `-a`, que muestra solo las direcciones IP que están respondiendo. Aquí tienes el comando:
+
+```bash
+fping -a -g 192.168.1.0/24
+```
+
+- `-a`: Muestra solo las direcciones IP que están activas (que responden al ping).
+- `-g`: Permite hacer ping a todas las direcciones IP del rango especificado (en este caso, `192.168.1.0/24`).
+
+Este comando te dará una lista de las direcciones IP activas en tu red.
+
