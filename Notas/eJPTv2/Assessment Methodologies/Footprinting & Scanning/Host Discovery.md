@@ -182,4 +182,7 @@ fping -a -g 192.168.1.0/24
 - `-g`: Permite hacer ping a todas las direcciones IP del rango especificado (en este caso, `192.168.1.0/24`).
 
 Este comando te dará una lista de las direcciones IP activas en tu red.
+### NMAP HOST DISCOVERY
+
+
 
