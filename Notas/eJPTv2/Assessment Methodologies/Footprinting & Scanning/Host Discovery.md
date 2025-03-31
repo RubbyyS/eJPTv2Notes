@@ -191,3 +191,17 @@ El comando **`nmap -sn --send-ip 10.1.0.0/24`** realiza lo mismo que el comando 
 - **`--send-ip`**: Esta opción le indica a **nmap** que envíe los paquetes de red directamente usando el protocolo **IP** (en lugar de utilizar otros protocolos de bajo nivel como **ICMP** o **ARP**). Esto puede hacer que el escaneo sea más rápido o eludir ciertas restricciones de firewall que bloquean los pings estándar.
 
 El comando **`nmap -sn -iL ips.txt`** se utiliza para realizar un escaneo de hosts activos (sin escanear puertos) a partir de una lista de direcciones IP contenida en un archivo.
+
+El comando **`nmap -sn -PS`** envía paquetes **SYN** al puerto 80 (por defecto) de los hosts en la red para verificar si están activos. Si el host responde con un **SYN-ACK**, significa que está activo.
+Este tipo de escaneo es útil cuando un firewall o dispositivo de red bloquea **pings ICMP**, pero permite tráfico TCP en puertos específicos. El **TCP SYN Ping** puede eludir esos filtros y detectar dispositivos activos.
+
+El comando **`nmap -sn -PS22`** realiza un **escaneo de hosts activos** en una red utilizando un **ping TCP SYN** dirigido al **puerto 22** (que es comúnmente utilizado para **SSH**).
+Se puede cambiar el 22 por cualquier puerto.
+
+El comando **`nmap -sn -v -T4 10.1.0.0/24`** realiza un **escaneo rápido** de **hosts activos** en el rango **10.1.0.0 a 10.1.0.255**.
+
+- **`-sn`**: Verifica si los dispositivos están activos (sin escanear puertos).
+    
+- **`-v`**: Muestra información detallada durante el escaneo.
+    
+- **`-T4`**: Hace que el escaneo sea más rápido.
