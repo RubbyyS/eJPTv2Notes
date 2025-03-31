@@ -184,5 +184,8 @@ fping -a -g 192.168.1.0/24
 Este comando te dará una lista de las direcciones IP activas en tu red.
 ### NMAP HOST DISCOVERY
 
+Este comando **`nmap -sn 10.1.0.0/24`** busca qué dispositivos están **activos** en el rango de direcciones **10.1.0.0 a 10.1.0.255**.
 
+El comando **`nmap -sn --send-ip 10.1.0.0/24`** realiza lo mismo que el comando anterior (escaneo de hosts activos en el rango **10.1.0.0 a 10.1.0.255**), pero con una diferencia importante:
 
+- **`--send-ip`**: Esta opción le indica a **nmap** que envíe los paquetes de red directamente usando el protocolo **IP** (en lugar de utilizar otros protocolos de bajo nivel como **ICMP** o **ARP**). Esto puede hacer que el escaneo sea más rápido o eludir ciertas restricciones de firewall que bloquean los pings estándar.
