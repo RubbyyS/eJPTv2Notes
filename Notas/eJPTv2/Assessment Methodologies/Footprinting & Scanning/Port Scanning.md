@@ -56,3 +56,16 @@ nmap -T4 -Pn -p- 10.4.24.205
 - `-T4`:  Aumenta la **velocidad del escaneo** (modo rápido/agresivo, sin ser riesgoso).  (Va de `-T0` a `-T5`, donde `T4` es buena para escaneos rápidos sin levantar demasiadas alertas).
 - `-Pn`:  **No hace ping**, asume que el host está activo.
 - `-p-`:   Escanea **todos los 65,535 puertos TCP** (¡no solo los comunes!).
+```bash
+nmap -Pn -sT 10.4.24.205
+```
+
+- `-Pn`:  **No hace ping**, asume que el host está activo.
+- `-sT`:  **Escanea puertos TCP.
+
+```bash
+nmap -Pn -sU 10.4.24.205
+```
+
+- `-Pn`:  **No hace ping**, asume que el host está activo.
+- `-sU`:  **Escanea puertos UDP.
